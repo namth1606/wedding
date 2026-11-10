@@ -178,7 +178,7 @@ function autoScrollStep(timestamp){
  if(!autoScrollActive)return;
  if(!autoScrollTimestamp)autoScrollTimestamp=timestamp;
  const delta=Math.min(timestamp-autoScrollTimestamp,64);autoScrollTimestamp=timestamp;
- autoScrollPosition+=delta*.028;
+ autoScrollPosition+=delta*.0308;
  const bottom=Math.max(0,document.documentElement.scrollHeight-innerHeight);
  window.scrollTo({top:Math.min(autoScrollPosition,bottom),behavior:'instant'});
  if(autoScrollPosition>=bottom){pauseAutoScroll();return}
